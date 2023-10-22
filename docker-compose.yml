@@ -1,0 +1,32 @@
+version: "2.10.2"
+services:
+  nb-postgres-db:
+   image: postgres
+   container_name: nb-postgres-db
+   env_file:
+     - .env
+   ports:
+     - '${POSTGRES_APP_PORT}:${POSTGRES_CONTAINER_PORT}'
+   networks:
+     - nb-net
+   restart: always
+  nb-service:
+    image: nb-service:0.0.1-SNAPSHOT
+    container_name: nb-service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - '8082:8082'
+      - '5006:5006'
+    networks:
+      - nb-net
+    depends_on:
+      - nb-postgres-db
+networks:
+  nb-net:
+    name: nb-net
+    attachable: true
+    driver: bridge
