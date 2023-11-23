@@ -1,4 +1,4 @@
-package com.ctu.se.oda.model11;
+package ctu.se.oda.model11;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
