@@ -1,9 +1,9 @@
 package ctu.se.oda.model11.api;
 
 import ctu.se.oda.model11.INotebookApplication;
-import ctu.se.oda.model11.models.commands.requests.notebooks.CreateNotebookCommandReqDTO;
-import ctu.se.oda.model11.models.commands.requests.notebooks.UpdateNotebookCommandReqDTO;
-import ctu.se.oda.model11.models.queries.responses.notebooks.RetrieveNotebookQueryResDTO;
+import ctu.se.oda.model11.models.commands.notebooks.CreateNotebookCommandReqDTO;
+import ctu.se.oda.model11.models.commands.notebooks.UpdateNotebookCommandReqDTO;
+import ctu.se.oda.model11.models.queries.notebooks.RetrieveNotebookQueryResDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

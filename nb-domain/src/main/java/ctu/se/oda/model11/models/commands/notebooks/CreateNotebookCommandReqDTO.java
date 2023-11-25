@@ -1,4 +1,4 @@
-package ctu.se.oda.model11.models.commands.requests.notebooks;
+package ctu.se.oda.model11.models.commands.notebooks;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -10,14 +10,11 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UpdateNotebookCommandReqDTO {
-    @JsonProperty("notebookId")
-    private String id;
+public class CreateNotebookCommandReqDTO {
     @JsonProperty("notebookName")
     private String name;
     @JsonProperty("notebookDescription")
     private String description;
-
     @JsonProperty("notebookProjectId")
     private String projectId;
 }

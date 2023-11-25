@@ -1,9 +1,9 @@
 package ctu.se.oda.model11;
 
 
-import ctu.se.oda.model11.models.commands.requests.notebooks.CreateNotebookCommandReqDTO;
-import ctu.se.oda.model11.models.commands.requests.notebooks.UpdateNotebookCommandReqDTO;
-import ctu.se.oda.model11.models.queries.responses.notebooks.RetrieveNotebookQueryResDTO;
+import ctu.se.oda.model11.models.commands.notebooks.CreateNotebookCommandReqDTO;
+import ctu.se.oda.model11.models.commands.notebooks.UpdateNotebookCommandReqDTO;
+import ctu.se.oda.model11.models.queries.notebooks.RetrieveNotebookQueryResDTO;
 
 import java.util.List;
 import java.util.UUID;
