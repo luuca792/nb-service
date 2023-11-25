@@ -1,7 +1,7 @@
 package ctu.se.oda.model11.api;
 
 import ctu.se.oda.model11.AppInformationService;
-import ctu.se.oda.model11.models.commands.responses.AppInfoResponse;
+import ctu.se.oda.model11.models.AppInfoResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

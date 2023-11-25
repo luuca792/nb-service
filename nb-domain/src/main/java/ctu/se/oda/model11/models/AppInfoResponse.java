@@ -1,4 +1,4 @@
-package ctu.se.oda.model11.models.commands.responses;
+package ctu.se.oda.model11.models;
 
 import lombok.Builder;
 import lombok.Data;

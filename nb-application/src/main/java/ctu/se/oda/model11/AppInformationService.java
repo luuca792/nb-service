@@ -1,6 +1,6 @@
 package ctu.se.oda.model11;
 
-import ctu.se.oda.model11.models.commands.responses.AppInfoResponse;
+import ctu.se.oda.model11.models.AppInfoResponse;
 import org.springframework.stereotype.Service;
 
 @Service

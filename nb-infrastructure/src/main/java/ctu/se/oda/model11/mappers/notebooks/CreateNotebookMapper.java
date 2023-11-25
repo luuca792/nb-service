@@ -2,7 +2,7 @@ package ctu.se.oda.model11.mappers.notebooks;
 
 import ctu.se.oda.model11.entities.Notebook;
 import ctu.se.oda.model11.mappers.IInfrastructureMapper;
-import ctu.se.oda.model11.models.commands.requests.notebooks.CreateNotebookCommandReqDTO;
+import ctu.se.oda.model11.models.commands.notebooks.CreateNotebookCommandReqDTO;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;

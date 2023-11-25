@@ -2,7 +2,7 @@ package ctu.se.oda.model11.mappers.notebooks;
 
 import ctu.se.oda.model11.entities.Notebook;
 import ctu.se.oda.model11.mappers.IInfrastructureMapper;
-import ctu.se.oda.model11.models.queries.responses.notebooks.RetrieveNotebookQueryResDTO;
+import ctu.se.oda.model11.models.queries.notebooks.RetrieveNotebookQueryResDTO;
 import org.springframework.stereotype.Component;
 
 @Component
