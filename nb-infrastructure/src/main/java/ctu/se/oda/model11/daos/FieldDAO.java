@@ -15,7 +15,7 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
-public class FieldDTO implements IFieldDAO{
+public class FieldDAO implements IFieldDAO{
     @Autowired
     private IFieldRepository fieldRepository;
     @Autowired
