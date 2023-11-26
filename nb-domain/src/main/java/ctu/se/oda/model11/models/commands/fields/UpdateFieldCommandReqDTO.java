@@ -1,4 +1,4 @@
-package ctu.se.oda.model11.models.commands.fieldtypes;
+package ctu.se.oda.model11.models.commands.fields;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -10,7 +10,9 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreateFieldTypeCommandReqDTO {
-    @JsonProperty("fieldTypeName")
+public class UpdateFieldCommandReqDTO {
+    @JsonProperty("fieldId")
+    private String id;
+    @JsonProperty("fieldName")
     private String name;
 }

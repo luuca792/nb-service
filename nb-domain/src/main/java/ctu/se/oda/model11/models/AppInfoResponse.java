@@ -2,7 +2,6 @@ package ctu.se.oda.model11.models;
 
 import lombok.Builder;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 @Data
 @Builder
