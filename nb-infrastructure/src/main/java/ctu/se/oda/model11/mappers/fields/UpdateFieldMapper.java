@@ -25,6 +25,8 @@ public class UpdateFieldMapper implements IInfrastructureMapper<UpdateFieldComma
         return Field.builder()
                 .id(optionalField.get().getId())
                 .name(Objects.isNull(source.getName()) ? optionalField.get().getName() : source.getName())
+                .notebook(optionalField.get().getNotebook())
+                .fieldType(optionalField.get().getFieldType())
                 .build();
     }
 }
