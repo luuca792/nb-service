@@ -1,11 +1,8 @@
 package ctu.se.oda.model11.api;
 
 import ctu.se.oda.model11.IValueApplication;
-import ctu.se.oda.model11.models.commands.fieldtypes.CreateFieldTypeCommandReqDTO;
-import ctu.se.oda.model11.models.commands.fieldtypes.UpdateFieldTypeCommandReqDTO;
 import ctu.se.oda.model11.models.commands.values.CreateValueCommandReqDTO;
 import ctu.se.oda.model11.models.commands.values.UpdateValueCommandReqDTO;
-import ctu.se.oda.model11.models.queries.fieldtypes.RetrieveFieldTypeQueryResDTO;
 import ctu.se.oda.model11.models.queries.values.RetrieveValueQueryResDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
