@@ -1,11 +1,9 @@
 package ctu.se.oda.model11.mappers.fields;
 
 import ctu.se.oda.model11.entities.Field;
-import ctu.se.oda.model11.entities.FieldType;
 import ctu.se.oda.model11.errors.messages.CustomMessageException;
 import ctu.se.oda.model11.mappers.IInfrastructureMapper;
 import ctu.se.oda.model11.models.commands.fields.CreateFieldCommandReqDTO;
-import ctu.se.oda.model11.models.commands.fieldtypes.CreateFieldTypeCommandReqDTO;
 import ctu.se.oda.model11.repositories.IFieldTypeRepository;
 import ctu.se.oda.model11.repositories.INoteBookRepository;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -7,7 +7,6 @@ import ctu.se.oda.model11.mappers.IInfrastructureMapper;
 import ctu.se.oda.model11.models.queries.fields.RetrieveFieldQueryResDTO;
 import ctu.se.oda.model11.models.queries.fieldtypes.RetrieveFieldTypeQueryResDTO;
 import ctu.se.oda.model11.models.queries.notebooks.RetrieveNotebookQueryResDTO;
-import ctu.se.oda.model11.repositories.IFieldRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

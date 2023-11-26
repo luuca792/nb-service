@@ -3,7 +3,6 @@ package ctu.se.oda.model11.errors.messages;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
 @Builder
