@@ -37,6 +37,11 @@ public class FieldApplication implements IFieldApplication {
     }
 
     @Override
+    public List<RetrieveFieldQueryResDTO> listByNotebookId(UUID notebookId) {
+        return fieldDAO.listByNotebookId(notebookId);
+    }
+
+    @Override
     public RetrieveFieldQueryResDTO retrieve(UUID fieldId) {
         return fieldDAO.retrieve(fieldId);
     }

@@ -12,5 +12,6 @@ public interface IFieldDAO {
     void update(UpdateFieldCommandReqDTO updateFieldCommandReqDTO);
     void delete(UUID fieldId);
     List<RetrieveFieldQueryResDTO> list();
+    List<RetrieveFieldQueryResDTO> listByNotebookId(UUID notebookId);
     RetrieveFieldQueryResDTO retrieve(UUID fieldId);
 }

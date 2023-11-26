@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 @RestController
@@ -25,8 +26,11 @@ public class FieldApi {
     }
 
     @GetMapping
-    public ResponseEntity<List<RetrieveFieldQueryResDTO>> list() {
-        return new ResponseEntity<>(fieldApplication.list(), HttpStatus.OK);
+    public ResponseEntity<List<RetrieveFieldQueryResDTO>> list(@RequestParam(required = false, name = "notebookId") String notebookId) {
+        if (Objects.isNull(notebookId)) {
+            return new ResponseEntity<>(fieldApplication.list(), HttpStatus.OK);
+        }
+        return new ResponseEntity<>(fieldApplication.listByNotebookId(UUID.fromString(notebookId)), HttpStatus.OK);
     }
 
     @PatchMapping
