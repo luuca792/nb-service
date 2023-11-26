@@ -7,6 +7,7 @@ import ctu.se.oda.model11.models.commands.fields.CreateFieldCommandReqDTO;
 import ctu.se.oda.model11.models.commands.fields.UpdateFieldCommandReqDTO;
 import ctu.se.oda.model11.models.queries.fields.RetrieveFieldQueryResDTO;
 import ctu.se.oda.model11.repositories.IFieldRepository;
+import ctu.se.oda.model11.repositories.INoteBookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,8 @@ import java.util.stream.Collectors;
 public class FieldDAO implements IFieldDAO{
     @Autowired
     private IFieldRepository fieldRepository;
+    @Autowired
+    private INoteBookRepository noteBookRepository;
     @Autowired
     private IInfrastructureMapper<CreateFieldCommandReqDTO, Field> createMapper;
     @Autowired
@@ -43,6 +46,15 @@ public class FieldDAO implements IFieldDAO{
     @Override
     public List<RetrieveFieldQueryResDTO> list() {
         return fieldRepository.findAll().stream().map(field -> retrieveMapper.convert(field)).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<RetrieveFieldQueryResDTO> listByNotebookId(UUID notebookId) {
+        var optinalNotebook = noteBookRepository.findById(notebookId);
+        if (optinalNotebook.isEmpty()) {
+            throw new IllegalArgumentException(CustomMessageException.NOTEBOOK_NOT_FOUND_BY_ID);
+        }
+        return fieldRepository.findByNotebook(optinalNotebook.get()).stream().map(field -> retrieveMapper.convert(field)).collect(Collectors.toList());
     }
 
     @Override
