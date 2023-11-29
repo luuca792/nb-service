@@ -32,7 +32,7 @@ public class ValueApi {
     @PatchMapping
     public ResponseEntity<Void> update(@RequestBody UpdateValueCommandReqDTO updateValueCommandReqDTO) {
         valueApplication.update(updateValueCommandReqDTO);
-        return new ResponseEntity<>(HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @GetMapping("/{valueId}")
@@ -43,6 +43,6 @@ public class ValueApi {
     @DeleteMapping("/{valueId}")
     public ResponseEntity<Void> delete(@PathVariable String valueId) {
         valueApplication.delete(UUID.fromString(valueId));
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

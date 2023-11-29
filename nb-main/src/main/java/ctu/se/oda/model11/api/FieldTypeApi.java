@@ -31,7 +31,7 @@ public class FieldTypeApi {
     @PatchMapping
     public ResponseEntity<Void> update(@RequestBody UpdateFieldTypeCommandReqDTO updateFieldTypeCommandReqDTO) {
         fieldTypeApplication.update(updateFieldTypeCommandReqDTO);
-        return new ResponseEntity<>(HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @GetMapping("/{fieldTypeId}")
@@ -42,6 +42,6 @@ public class FieldTypeApi {
     @DeleteMapping("/{fieldTypeId}")
     public ResponseEntity<Void> delete(@PathVariable Long fieldTypeId) {
         fieldTypeApplication.delete(fieldTypeId);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
