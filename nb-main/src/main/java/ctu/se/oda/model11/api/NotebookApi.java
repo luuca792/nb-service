@@ -26,7 +26,7 @@ public class NotebookApi {
         }else {
             notebookApplication.update(updateNotebookCommandReqDTO);
         }
-        return new ResponseEntity<>(HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @GetMapping
@@ -42,6 +42,6 @@ public class NotebookApi {
     @DeleteMapping("/{notebookId}")
     public ResponseEntity<Void> delete(@PathVariable String notebookId) {
         notebookApplication.delete(UUID.fromString(notebookId));
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
