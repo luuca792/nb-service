@@ -34,4 +34,7 @@ public class Field {
 
     @OneToMany(mappedBy = "field", cascade = CascadeType.ALL)
     private List<Value> values = new ArrayList<>();
+
+    @OneToMany(mappedBy = "field", cascade = CascadeType.ALL)
+    private List<FieldTask> fieldTasks = new ArrayList<>();
 }

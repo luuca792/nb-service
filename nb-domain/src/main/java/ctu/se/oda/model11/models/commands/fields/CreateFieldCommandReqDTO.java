@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -17,4 +19,6 @@ public class CreateFieldCommandReqDTO {
     private Long fieldTypeId;
     @JsonProperty("fieldNotebookId")
     private String notebookId;
+    @JsonProperty("fieldTaskIds")
+    private List<String> taskIds;
 }
