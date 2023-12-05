@@ -13,5 +13,7 @@ public interface IFieldDAO {
     void delete(UUID fieldId);
     List<RetrieveFieldQueryResDTO> list();
     List<RetrieveFieldQueryResDTO> listByNotebookId(UUID notebookId);
+    List<RetrieveFieldQueryResDTO> listByTaskId(UUID taskId);
+    List<RetrieveFieldQueryResDTO> listByNotebookIdAndTaskId(UUID notebookId, UUID taskId);
     RetrieveFieldQueryResDTO retrieve(UUID fieldId);
 }

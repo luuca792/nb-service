@@ -26,11 +26,15 @@ public class FieldApi {
     }
 
     @GetMapping
-    public ResponseEntity<List<RetrieveFieldQueryResDTO>> list(@RequestParam(required = false, name = "notebookId") String notebookId) {
-        if (Objects.isNull(notebookId)) {
+    public ResponseEntity<List<RetrieveFieldQueryResDTO>> list(@RequestParam(required = false, name = "notebookId") String notebookId, @RequestParam(required = false, name = "taskId") String taskId) {
+        if (Objects.isNull(notebookId) && Objects.isNull(taskId)) {
             return new ResponseEntity<>(fieldApplication.list(), HttpStatus.OK);
+        }else if (Objects.isNull(notebookId)) {
+            return new ResponseEntity<>(fieldApplication.listByTaskId(UUID.fromString(taskId)), HttpStatus.OK);
+        }else if (Objects.isNull(taskId)) {
+            return new ResponseEntity<>(fieldApplication.listByNotebookId(UUID.fromString(notebookId)), HttpStatus.OK);
         }
-        return new ResponseEntity<>(fieldApplication.listByNotebookId(UUID.fromString(notebookId)), HttpStatus.OK);
+        return new ResponseEntity<>(fieldApplication.listByNotebookIdAndTaskId(UUID.fromString(notebookId), UUID.fromString(taskId)), HttpStatus.OK);
     }
 
     @PatchMapping

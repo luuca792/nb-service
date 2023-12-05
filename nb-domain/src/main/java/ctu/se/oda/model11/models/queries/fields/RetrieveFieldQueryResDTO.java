@@ -26,4 +26,6 @@ public class RetrieveFieldQueryResDTO {
     private RetrieveFieldTypeQueryResDTO fieldType;
     @JsonProperty("fieldValues")
     private List<RetrieveValueQueryResDTO> values;
+    @JsonProperty("fieldTaskIds")
+    private List<String> taskIds;
 }

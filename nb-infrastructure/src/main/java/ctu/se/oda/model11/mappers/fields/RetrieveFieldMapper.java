@@ -31,6 +31,7 @@ public class RetrieveFieldMapper implements IInfrastructureMapper<Field, Retriev
                 .fieldType(retrieveFieldTypeMapper.convert(source.getFieldType()))
                 .notebook(retrieveNotebookMapper.convert(source.getNotebook()))
                 .values(source.getValues().stream().map(value -> retrieveValueMapper.convert(value)).collect(Collectors.toList()))
+                .taskIds(source.getFieldTasks().stream().map(fieldTask -> fieldTask.getTaskId().toString()).collect(Collectors.toList()))
                 .build();
     }
 }
